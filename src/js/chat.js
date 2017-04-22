@@ -33,7 +33,7 @@ export default class Login extends Component {
         AsyncStorage.getItem('token').then((value) => {
             if( value ) {
                 window.token = value;
-                fetch('http://www.zcqy520.com/api/wap/chat', {
+                fetch('http://192.168.1.121/api/wap/chat', {
                     method: 'POST',
                     //cache  强制最新的数据
                     headers: {
@@ -71,7 +71,7 @@ export default class Login extends Component {
         Alert.alert("提示","确认操作",[
             {text: '发送礼物',onPress: () => {
 
-                fetch('http://www.zcqy520.com/api/wap/sendgift', {
+                fetch('http://192.168.1.121/api/wap/sendgift', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -137,7 +137,7 @@ export default class Login extends Component {
         
         AsyncStorage.getItem('token').then((value) => {
             
-            fetch('http://www.zcqy520.com/api/wap/getuserinfo', {
+            fetch('http://192.168.1.121/api/wap/getuserinfo', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -184,7 +184,7 @@ export default class Login extends Component {
 
             ToastAndroid.show("内容不能为空",ToastAndroid.SHORT); return false;
         }
-        fetch('http://www.zcqy520.com/api/wap/sendsms', {
+        fetch('http://192.168.1.121/api/wap/sendsms', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -221,12 +221,12 @@ export default class Login extends Component {
     renderMessage(data,i) {
         // console.log("[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[");
         // console.log(this.state.chats);
-        // console.log('http://www.zcqy520.com/Data/User/'+data.fid+'/'+this.state.myhead+'.jpg');
+        // console.log('http://192.168.1.121/Data/User/'+data.fid+'/'+this.state.myhead+'.jpg');
         if( this.props.navigation.state.params.uid == data.fid ){
             return (
                 <View key={i} style={{backgroundColor:'transparent',alignItems: 'flex-start',flex:1,flexDirection: 'row',width:'100%',marginTop:10,justifyContent: 'flex-start',borderBottomWidth:0.2,borderColor:"#EEE"}}>
                     <View style={{justifyContent: 'flex-start',flexDirection: 'row',alignItems:'flex-start',width:70}}>
-                        <Image style={{height:45,width:45,marginLeft:10,borderRadius:3}} source={{uri: 'http://www.zcqy520.com/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
+                        <Image style={{height:45,width:45,marginLeft:10,borderRadius:3}} source={{uri: 'http://192.168.1.121/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
                     </View>
                     <View style={{maxWidth:(Dimensions.get('window').width)*2/3}} >
                         <Text style={{flex:0,fontSize:16,color:"#333",backgroundColor:'#9CE76C',padding:15,borderRadius:10}}>{data.content}</Text>
@@ -242,7 +242,7 @@ export default class Login extends Component {
                         <Text style={{flex:0,fontSize:16,color:"#333",backgroundColor:'#9CE76C',padding:15,borderRadius:10}}>{data.content}</Text>
                     </View>
                     <View style={{justifyContent: 'flex-start',flexDirection: 'row',alignItems:'flex-start',width:70}}>
-                        <Image style={{height:45,width:45,marginLeft:10,borderRadius:3}} source={{uri: 'http://www.zcqy520.com/Data/User/'+data.fid+'/'+this.state.myhead+'.jpg'}} />
+                        <Image style={{height:45,width:45,marginLeft:10,borderRadius:3}} source={{uri: 'http://192.168.1.121/Data/User/'+data.fid+'/'+this.state.myhead+'.jpg'}} />
                     </View>
                 </View>
             )

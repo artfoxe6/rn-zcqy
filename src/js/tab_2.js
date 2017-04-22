@@ -31,7 +31,7 @@ export default class Login extends Component {
 
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/chatlists', {
+            fetch('http://192.168.1.121/api/wap/chatlists', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -99,7 +99,7 @@ export default class Login extends Component {
             <TouchableOpacity activeOpacity={0.7} key={i} onPress={()=>this.props.navigation.navigate("Chat",{'uid':data.uid,'head':data.head,"name":data.name,dishead:'123'})}>
                 <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:75,width:'100%',marginTop:0,justifyContent: 'space-between',borderBottomWidth:0.2,borderColor:"#EEE",}}>
                     <View style={{flex:1,justifyContent: 'flex-start',flexDirection: 'row',alignItems:'flex-start'}}>
-                        <Image style={{height:55,width:55,marginLeft:10,borderRadius:1}} source={{uri: 'http://www.zcqy520.com/Data/User/'+data.uid+'/'+data.head+'.jpg'}} />
+                        <Image style={{height:55,width:55,marginLeft:10,borderRadius:1}} source={{uri: 'http://192.168.1.121/Data/User/'+data.uid+'/'+data.head+'.jpg'}} />
                         <View style={{flex:1,justifyContent: 'space-around',flexDirection: 'column',alignItems:'flex-start',marginLeft:20}}>
                             <Text style={{fontSize:16,color:"#666",}}>{data.name}</Text>
                             <Text style={{fontSize:12,color:"#999",marginTop:10}}>{data.content}</Text>

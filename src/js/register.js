@@ -42,7 +42,7 @@ export default class Login extends Component {
             ToastAndroid.show("手机号码有误",ToastAndroid.SHORT); 
             return false; 
         }else{
-            fetch('http://www.zcqy520.com/api/wap/sendverifycode', {
+            fetch('http://192.168.1.121/api/wap/sendverifycode', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -67,7 +67,7 @@ export default class Login extends Component {
 
 	
     login() {
-        fetch('http://www.zcqy520.com/api/wap/login', {
+        fetch('http://192.168.1.121/api/wap/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -93,7 +93,7 @@ export default class Login extends Component {
     }
 
 	register() {
-		fetch('http://www.zcqy520.com/api/wap/register', {
+		fetch('http://192.168.1.121/api/wap/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

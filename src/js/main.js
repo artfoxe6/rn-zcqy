@@ -66,7 +66,7 @@ export default class Main extends Component {
 
         if( value ) {
             var v = JSON.parse(value);
-            fetch('http://www.zcqy520.com/api/wap/login', {
+            fetch('http://192.168.1.121/api/wap/login', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -98,7 +98,7 @@ export default class Main extends Component {
   fresh(token) {
 
       // 登陆刷新数据
-      fetch('http://www.zcqy520.com/api/wap/getuserinfo', {
+      fetch('http://192.168.1.121/api/wap/getuserinfo', {
           method: 'POST',
           //cache  强制最新的数据
           headers: {
@@ -169,7 +169,7 @@ export default class Main extends Component {
 
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/noreadmessage', {
+            fetch('http://192.168.1.121/api/wap/noreadmessage', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {

@@ -68,7 +68,7 @@ export default class Login extends Component {
 
                     <ScrollView>
                 
-                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"成都尊诚情缘婚姻服务中心",url:"http://zcqy520.com/wap/app_about.html"})} >
+                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"成都尊诚情缘婚姻服务中心",url:"http://192.168.1.121/wap/app_about.html"})} >
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:50,width:'100%',marginTop:20,justifyContent: 'space-between',borderTopWidth:0.5,borderColor:"#EEE"}}>
                         <Text style={{marginLeft:20}}>关于我们</Text>
                         <Icon style={{marginRight:20,opacity:0.5}} name="ios-arrow-forward-outline"  size={30}  color="#999" />
@@ -82,7 +82,7 @@ export default class Login extends Component {
                     </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"公司地址",url:"http://zcqy520.com/wap/app_contact.html"})} >
+                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"公司地址",url:"http://192.168.1.121/wap/app_contact.html"})} >
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:50,width:'100%',marginTop:10,justifyContent: 'space-between',borderTopWidth:0.5,borderColor:"#EEE"}}>
                         <Text style={{marginLeft:20}}>公司地址</Text>
                         <Icon style={{marginRight:20,opacity:0.5}} name="ios-arrow-forward-outline"  size={30}  color="#999" />
@@ -98,7 +98,7 @@ export default class Login extends Component {
 
                     
 
-                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"选择你的专属红娘",url:"http://zcqy520.com/SinglePage/app_teacher.html"})} >
+                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:"选择你的专属红娘",url:"http://192.168.1.121/SinglePage/app_teacher.html"})} >
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:50,width:'100%',marginTop:10,justifyContent: 'space-between',borderTopWidth:0.5,borderColor:"#EEE"}}>
                         <Text style={{marginLeft:20}}>委托红娘</Text>
                         <Icon style={{marginRight:20,opacity:0.5}} name="ios-arrow-forward-outline"  size={30}  color="#999" />

@@ -63,7 +63,7 @@ export default class Login extends Component {
                     
                     if( response.path ) {
 
-                        RNFetchBlob.fetch('POST', 'http://www.zcqy520.com/api/wap/uploadfile?token='+value+'&action=head', {
+                        RNFetchBlob.fetch('POST', 'http://192.168.1.121/api/wap/uploadfile?token='+value+'&action=head', {
                             
                             'Content-Type' : 'application/octet-stream',
 
@@ -98,7 +98,7 @@ export default class Login extends Component {
             if( value ) {
                 // this.setState({token:value});
                 // 登陆刷新数据
-                fetch('http://www.zcqy520.com/api/wap/getuserinfo', {
+                fetch('http://192.168.1.121/api/wap/getuserinfo', {
                     method: 'POST',
                     //cache  强制最新的数据
                     headers: {
@@ -157,7 +157,7 @@ export default class Login extends Component {
 
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/myphoto', {
+            fetch('http://192.168.1.121/api/wap/myphoto', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -187,9 +187,9 @@ export default class Login extends Component {
         if( i>=2 ) {
             return false;
         }
-        // console.log('http://www.zcqy520.com/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'+'\n');
+        // console.log('http://192.168.1.121/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'+'\n');
         return(
-            <Image key = {i} style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://www.zcqy520.com/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'}} />
+            <Image key = {i} style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://192.168.1.121/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'}} />
             // <Image style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={require('../images/2.jpg')} />
         )
     }
@@ -205,14 +205,14 @@ export default class Login extends Component {
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:100,width:'100%',marginTop:20,justifyContent: 'space-between',borderWidth:1,borderColor:"#EEE"}}>
                         <View style={{flex:1,justifyContent: 'flex-start',flexDirection: 'row',alignItems:'flex-start'}}>
                             <TouchableOpacity onPress={()=>this.selectImage()}>
-                                <Image style={{height:80,width:80,marginLeft:20,borderRadius:1}} source={{uri: 'http://www.zcqy520.com/Data/User/'+this.state.myinfo.uid+'/'+this.state.myinfo.head+'.jpg'}} />
+                                <Image style={{height:80,width:80,marginLeft:20,borderRadius:1}} source={{uri: 'http://192.168.1.121/Data/User/'+this.state.myinfo.uid+'/'+this.state.myinfo.head+'.jpg'}} />
                             </TouchableOpacity>
                             <View style={{flex:1,justifyContent: 'space-around',flexDirection: 'column',alignItems:'flex-start',marginLeft:20}}>
                                 <Text style={{fontSize:20,color:"#666",}}>{this.state.myinfo.name}</Text>
                                 <Text style={{fontSize:15,color:"#666",marginTop:10}}>情缘编号：{this.state.myinfo.userid}</Text>
                             </View>
                         </View>
-                        <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:'修改资料',url:"http://www.zcqy520.com/wap/center_app.html#"+this.state.token})}>
+                        <TouchableOpacity onPress={()=>this.props.navigation.navigate("Web",{title:'修改资料',url:"http://192.168.1.121/wap/center_app.html#"+this.state.token})}>
                         <View style={{marginRight:10,height:100,width:50,flex:1,alignItems:'center',justifyContent:'center'}} >
                             <Icon name="ios-create-outline"  size={35}  color="#666" />
                         </View>
@@ -238,7 +238,7 @@ export default class Login extends Component {
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:80,width:'100%',marginTop:20,justifyContent: 'flex-start'}}>
                         <Text style={{marginLeft:20,marginRight:10}}>个人相册</Text>
                         {this.state.photos.map((data,i)=>this.renderImg(data,i)) }
-                        <Image  style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://www.zcqy520.com/Data/User/'+this.state.myinfo.uid+'/'+this.state.myinfo.head+'.jpg'}} />
+                        <Image  style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://192.168.1.121/Data/User/'+this.state.myinfo.uid+'/'+this.state.myinfo.head+'.jpg'}} />
                     </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>this.props.navigation.navigate("Userdetail",{uid:this.state.myinfo.uid})}  >

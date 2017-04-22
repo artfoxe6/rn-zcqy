@@ -43,7 +43,7 @@ export default class Login extends Component {
 
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/userphoto', {
+            fetch('http://192.168.1.121/api/wap/userphoto', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -74,9 +74,9 @@ export default class Login extends Component {
         if( i>=2 ) {
             return false;
         }
-        // console.log('http://www.zcqy520.com/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'+'\n');
+        // console.log('http://192.168.1.121/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'+'\n');
         return(
-            <Image key = {i} style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://www.zcqy520.com/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'}} />
+            <Image key = {i} style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://192.168.1.121/Data/User/'+data.uid+'/'+data.imgurl+'.jpg'}} />
             // <Image style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={require('../images/2.jpg')} />
         )
     }
@@ -88,7 +88,7 @@ export default class Login extends Component {
 
     fresh() {
 
-        fetch('http://www.zcqy520.com/api/wap/userinfo', {
+        fetch('http://192.168.1.121/api/wap/userinfo', {
             method: 'POST',
             //cache  强制最新的数据
             headers: {
@@ -129,7 +129,7 @@ export default class Login extends Component {
                     <ScrollView>
                 
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:110,width:'100%',marginTop:20,justifyContent: 'space-between',borderWidth:1,borderColor:"#EEE"}}>
-                            <Image style={{height:90,width:90,marginLeft:20,borderRadius:1}} source={{uri: 'http://www.zcqy520.com/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
+                            <Image style={{height:90,width:90,marginLeft:20,borderRadius:1}} source={{uri: 'http://192.168.1.121/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
                             <View style={{flex:1,justifyContent: 'space-around',flexDirection: 'column',alignItems:'flex-start',marginLeft:20,paddingRight:15}}>
                                 <Text style={{fontSize:16,color:"#666",marginTop:-10}}>{this.state.userinfo.name} <Text style={{fontSize:12,color:"#666",marginLeft:15}}>ID:{this.state.userinfo.uid}</Text></Text>
                                 
@@ -141,7 +141,7 @@ export default class Login extends Component {
                     <View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:80,width:'100%',marginTop:20,justifyContent: 'flex-start'}}>
                         <Text style={{marginLeft:20,marginRight:10}}>个人相册</Text>
                         {this.state.photos.map((data,i)=>this.renderImg(data,i)) }
-                        <Image  style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://www.zcqy520.com/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
+                        <Image  style={{height:60,width:60,borderRadius:1,marginLeft:10}} source={{uri: 'http://192.168.1.121/Data/User/'+this.props.navigation.state.params.uid+'/'+this.props.navigation.state.params.head+'.jpg'}} />
                     </View>
                     </TouchableOpacity>
                     

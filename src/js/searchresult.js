@@ -74,7 +74,7 @@ export default class Searchresult extends Component {
                 }
                 window.sql = window.sql.replace(/undefined/ig,"");
             }).then(function(){
-                fetch('http://www.zcqy520.com/api/wap/search', {
+                fetch('http://192.168.1.121/api/wap/search', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/x-www-form-urlencoded',
@@ -109,11 +109,11 @@ export default class Searchresult extends Component {
   }
 
   _renderRowView(rowData) {
-    // console.log('http://www.zcqy520.com/Data/User/'+rowData['uid']+'/'+rowData['head']+'.jpg');
+    // console.log('http://192.168.1.121/Data/User/'+rowData['uid']+'/'+rowData['head']+'.jpg');
     return (
         <TouchableOpacity  onPress={()=>this.props.navigation.navigate("User",{'uid':rowData['uid'],'head':rowData['head']})} >
 		<View style={{backgroundColor:'#fff',alignItems: 'center',flex:0,flexDirection: 'row',height:110,width:'100%',marginTop:20,justifyContent: 'space-between',borderWidth:1,borderColor:"#EEE"}}>
-                <Image style={{height:90,width:90,marginLeft:20,borderRadius:1}} source={{uri: 'http://www.zcqy520.com/Data/User/'+rowData['uid']+'/'+rowData['head']+'.jpg'}} />
+                <Image style={{height:90,width:90,marginLeft:20,borderRadius:1}} source={{uri: 'http://192.168.1.121/Data/User/'+rowData['uid']+'/'+rowData['head']+'.jpg'}} />
                 <View style={{flex:1,justifyContent: 'space-around',flexDirection: 'column',alignItems:'flex-start',marginLeft:20,paddingRight:15}}>
                     <Text style={{fontSize:16,color:"#666",marginTop:-10}}>{rowData['name']} <Text style={{fontSize:12,color:"#666",marginLeft:15}}>ID:{rowData['uid']}</Text></Text>
                     

@@ -21,7 +21,7 @@ export default class Tab_1 extends Component {
     fresh() {
         AsyncStorage.getItem('token').then((value) => {
             if( value ) {
-                fetch('http://www.zcqy520.com/api/wap/getrecommendusersrand', {
+                fetch('http://192.168.1.121/api/wap/getrecommendusersrand', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -97,7 +97,7 @@ export default class Tab_1 extends Component {
 
             <View style={[styles.item,vty]} key={i}>
                 <TouchableOpacity activeOpacity={0.6} onPress={()=>this.props.navigation.navigate("User",{'uid':uid,'head':head})} >
-                        <Image style={[styles.imgbox,sty,{height:parseInt((Dimensions.get("window").height-169)/3)}]} source={{uri: 'http://www.zcqy520.com/Data/User/'+uid+'/'+head+'.jpg'}} >
+                        <Image style={[styles.imgbox,sty,{height:parseInt((Dimensions.get("window").height-169)/3)}]} source={{uri: 'http://192.168.1.121/Data/User/'+uid+'/'+head+'.jpg'}} >
                         </Image>
                 </TouchableOpacity>
 

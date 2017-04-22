@@ -40,7 +40,7 @@ export default class Login extends Component {
 
         //     if( value ) {
         //         var v = JSON.parse(value);
-        //         fetch('http://www.zcqy520.com/api/wap/login', {
+        //         fetch('http://192.168.1.121/api/wap/login', {
         //             method: 'POST',
         //             //cache  强制最新的数据
         //             headers: {
@@ -70,7 +70,7 @@ export default class Login extends Component {
     }
 
     login() {
-    	fetch('http://www.zcqy520.com/api/wap/login', {
+    	fetch('http://192.168.1.121/api/wap/login', {
             method: 'POST',
             //cache  强制最新的数据
             headers: {

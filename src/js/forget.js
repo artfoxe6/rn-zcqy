@@ -47,7 +47,7 @@ export default class Forget extends Component {
             ToastAndroid.show("手机号码有误",ToastAndroid.SHORT); 
             return false; 
         }else{
-            fetch('http://www.zcqy520.com/api/wap/sendverifycode', {
+            fetch('http://192.168.1.121/api/wap/sendverifycode', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -71,7 +71,7 @@ export default class Forget extends Component {
     }
 
     login() {
-        fetch('http://www.zcqy520.com/api/wap/login', {
+        fetch('http://192.168.1.121/api/wap/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -97,7 +97,7 @@ export default class Forget extends Component {
     }
 
     register() {
-		fetch('http://www.zcqy520.com/api/wap/forget', {
+		fetch('http://192.168.1.121/api/wap/forget', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

@@ -43,7 +43,7 @@ export default class Chat extends Component {
 
         // setTimeout(function(){
 
-	        fetch('http://www.zcqy520.com/api/wap/userinfo', {
+	        fetch('http://192.168.1.121/api/wap/userinfo', {
 		        method: 'POST',
 		        headers: {
 		        	'Content-Type': 'application/x-www-form-urlencoded',
@@ -64,7 +64,7 @@ export default class Chat extends Component {
 		        console.error(error);
 		    });  
 
-		    fetch('http://www.zcqy520.com/api/wap/claim', {
+		    fetch('http://192.168.1.121/api/wap/claim', {
 		        method: 'POST',
 		        headers: {
 		        	'Content-Type': 'application/x-www-form-urlencoded',

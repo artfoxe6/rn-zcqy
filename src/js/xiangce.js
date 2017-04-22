@@ -37,7 +37,7 @@ export default class Charge extends Component {
 
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/myphoto', {
+            fetch('http://192.168.1.121/api/wap/myphoto', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -69,7 +69,7 @@ export default class Charge extends Component {
 
     fresh() {
 
-        fetch('http://www.zcqy520.com/api/wap/userphoto', {
+        fetch('http://192.168.1.121/api/wap/userphoto', {
             method: 'POST',
             //cache  强制最新的数据
             headers: {
@@ -86,10 +86,10 @@ export default class Charge extends Component {
                 var o = JSON.parse(jdata);
 
                 for( var i = o.length-1; i>= 0 ; i-- ) {
-                    var t = {photo:"http://www.zcqy520.com/Data/User/"+o[i].uid+"/"+o[i].imgurl+".jpg"};
+                    var t = {photo:"http://192.168.1.121/Data/User/"+o[i].uid+"/"+o[i].imgurl+".jpg"};
                     a.push(t);
                 }
-                a.push({photo:"http://www.zcqy520.com/Data/User/"+this.props.navigation.state.params.uid+"/"+this.props.navigation.state.params.head+".jpg"});
+                a.push({photo:"http://192.168.1.121/Data/User/"+this.props.navigation.state.params.uid+"/"+this.props.navigation.state.params.head+".jpg"});
 
                 this.setState({
                     images:a
@@ -141,7 +141,7 @@ export default class Charge extends Component {
                     
                     if( response.path ) {
 
-                        RNFetchBlob.fetch('POST', 'http://www.zcqy520.com/api/wap/uploadfile?token='+value, {
+                        RNFetchBlob.fetch('POST', 'http://192.168.1.121/api/wap/uploadfile?token='+value, {
                             
                             'Content-Type' : 'application/octet-stream',
 

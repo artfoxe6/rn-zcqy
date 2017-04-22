@@ -28,7 +28,7 @@ export default class Simple extends Component {
   getuserphotos() {
         AsyncStorage.getItem('token').then((value) => {
 
-            fetch('http://www.zcqy520.com/api/wap/userphoto', {
+            fetch('http://192.168.1.121/api/wap/userphoto', {
                 method: 'POST',
                 //cache  强制最新的数据
                 headers: {
@@ -45,7 +45,7 @@ export default class Simple extends Component {
                     var arr = [];
                     for(var i = 0; i<o.length; i++ ){
 
-                        arr.push({photo:'http://www.zcqy520.com/Data/User/'+o[i].uid+'/'+o[i].imgurl+'.jpg'});
+                        arr.push({photo:'http://192.168.1.121/Data/User/'+o[i].uid+'/'+o[i].imgurl+'.jpg'});
                     }
                     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
                     this.setState({
@@ -77,7 +77,7 @@ export default class Simple extends Component {
                   // console.log(id+"++++++++++++++++++++");
                   if( id ) {
 
-                      fetch('http://www.zcqy520.com/api/wap/delimg', {
+                      fetch('http://192.168.1.121/api/wap/delimg', {
                           method: 'POST',
                           //cache  强制最新的数据
                           headers: {

@@ -25,7 +25,7 @@ export default class Charge extends Component {
         //     if( value !== null ) {
 
         //         window.token = value;
-        //         fetch('http://zcqy520.com/api/wap/createpay', {
+        //         fetch('http://192.168.1.121/api/wap/createpay', {
         //             method: 'POST',
         //             headers: {
         //                 'Content-Type': 'application/x-www-form-urlencoded',
