@@ -24,11 +24,13 @@
 hackerjieson@gmail.com
 
 # 截图
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/0.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/1.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/2.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/3.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/4.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/5.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/6.png" style="max-width:100%;">
-<img src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/7.png" style="max-width:100%;">
+
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/0.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/1.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/2.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/3.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/4.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/5.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/6.png" >
+<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/7.png" >
+
