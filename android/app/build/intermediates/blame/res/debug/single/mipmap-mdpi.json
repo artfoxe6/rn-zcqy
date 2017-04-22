@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/opt/hello/zcqy/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/opt/hello/zcqy/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/opt/hello/zcqy/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/message.png",
+        "source": "/opt/hello/zcqy/android/app/src/main/res/mipmap-mdpi/message.png"
+    }
+]

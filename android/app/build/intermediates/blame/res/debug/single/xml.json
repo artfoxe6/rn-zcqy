@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/opt/hello/zcqy/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/opt/hello/zcqy/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.42.3/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/opt/hello/zcqy/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/opt/hello/zcqy/android/app/build/intermediates/exploded-aar/zcqy/react-native-image-picker/unspecified/res/xml/provider_paths.xml"
+    }
+]
