@@ -1,27 +1,23 @@
 # rn-zcqy
-采用 react-native 构建 的 成都尊诚情缘app，几年前我就玩过 phonegap/cordova，
+采用 react-native 构建的跨平台婚恋行业App.
 
-开发过几个简单的app，最终还是忍受不了那个性能问题，虽然变成了web编程，但是仍然存在兼容问题，
+# 前言
+几年前用过 phonegap/cordova，以及后来的 ionic +angular,开发过几款App，
+性能问题很大，加上crosswalk 后有明显改善,但生态始终没有起来,没有大量优秀的三方库,注定做不了复杂的App
+直到facebook推出react-native后,尝试做了几款App下来,性能已经接近原生,生态也相当富裕.值得前端入手.
 
-不同安卓手机内置的 webview 兼容不同，后来出了 ionic +angular,嗯  这下基本上性能还算勉强过关，
-
-使用 crosswalk 可以提高性能和兼容性，基本应用应该是没问题的..
----------------------------------
-后来facebook不是出了个react-native吗，我就抱着试一试的心态用了一下，嗯，真的还不错，
-
-性能duang duang！！！ 开发速度也是 duang duang！！！  我决定以后开发app就用 rn 了。
+# 功能
+> 实现了类似探探一样的 左滑喜欢,右滑下一个
+> 上传照片
+> 在线聊天
+> 会员充值
+> 礼物系统
+> 查找附近的会员
+> 红娘服务
 
 # 说明
-
-因为这个app 很多地方需要联网数据，所以你在本地是无法运行的，
-
-温馨提示，如果没有数据，那你只能停留在登陆页面#——#
-
-你可以修改 boot.js 里面的引导步骤，来看具体的页面
-
-需要数据的也可以私信我 
-
-hackerjieson@gmail.com
+因为没有数据库,所以本地无法完整的运行起来,只能通过更改boot.js,展示具体的静态页面
+可以在应用宝和苹果商店搜索 "尊诚情缘",下载体验
 
 # 截图
 
@@ -31,6 +27,4 @@ hackerjieson@gmail.com
 <img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/3.png" >
 <img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/4.png" >
 <img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/5.png" >
-<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/6.png" >
-<img style='width:200px;' src="https://raw.githubusercontent.com/codeAB/rn-zcqy/master/screenshot/7.png" >
 
